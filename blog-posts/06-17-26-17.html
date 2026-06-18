@@ -29,9 +29,9 @@
             Things like why I can be the owner of a subscription but still can't create a simple user account, or why moving a subscription completely broke your databases, but all of it is just my own explanation of everything Azure IAM.
         </p>
 
-        <p class="section-title" style="margin-bottom: 1rem;">1. Microsoft Entra ID Roles vs Azure RBAC Roles</p>
+        <p class="section-title" style="margin-bottom: 1rem;">Microsoft Entra ID Roles vs Azure RBAC Roles</p>
         <p class="post-text" style="margin-bottom: 2rem;">
-            Here's an important Azure-specific distinction: <span class="bold">Azure has two completely separate role-assignment planes that do not overlap by default.</span>
+            Azure has two completely separate role-assignment planes that do not overlap by default.
             <br><br>
             • <span class="bold">Microsoft Entra ID Roles (Directory Level):</span> These control the <span class="italic">identity brain</span> itself. Roles like <span class="italic">Global Administrator</span> or <span class="italic">User Administrator</span> live here. They let you create users, delete groups, and manage app registrations. 
             <br>
@@ -57,7 +57,7 @@
 [ Dev Subscription ]             [ Prod Subscription ]
         </p>
 
-        <p class="section-title" style="margin-bottom: 1rem;">Why this matters</p>
+        <p class="section-title" style="margin-bottom: 1rem;">Implications</p>
         <p class="post-text" style="margin-bottom: 2rem;">
             If a company restructures and you have to change the directory/tenant that your Azure subscription trusts, <span class="bold">it tears down the entire authorization house of cards.</span> 
             <br><br>
@@ -90,7 +90,7 @@
 
         <p class="section-title" style="margin-bottom: 1rem;">Conditional Access</p>
         <p class="post-text" style="margin-bottom: 2rem;">
-            If you're coming from a background with some other cloud provider like AWS its easy to focus on network isolation—Network Security Groups (NSGs), private endpoints, and hub-spoke VNet architectures. 
+            If you're coming from a background with some other cloud provider like AWS its easy to focus on network isolation, Network Security Groups (NSGs), private endpoints, and hub-spoke VNet architectures. 
             <br><br>
             In Azure, the network firewall is not meant to be a primary line of defense; <span class="bold">Entra ID Conditional Access is.</span>
             <br><br>
@@ -101,8 +101,6 @@
 
         <p class="section-title" style="margin-bottom: 1rem;">My own distillation of these concepts</p>
         <p class="post-text" style="margin-bottom: 2rem;">
-            If you are trying to cut through the confusion right now, stop trying to memorize every Azure IAM screen. Just memorize this flow:
-            <br><br>
             1. <span class="bold">Entra ID</span> checks <span class="italic">who</span> you are (Authentication).
             <br>
             2. <span class="bold">Azure RBAC</span> checks <span class="italic">where</span> you are allowed to look (Authorization via Scopes).
