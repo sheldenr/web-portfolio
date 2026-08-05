@@ -10,8 +10,9 @@
     <link rel="stylesheet" type="text/css" href="style.css"/> 
     <title>Shelden Rattray</title>
 </head>
-<body>
+<body class="animate">
     <div class="contents">
+        <a href="index.html" class="top-nav-link">home</a>
     <section id="header">
         <p class="sub-section-title">
             Blogs
@@ -120,13 +121,15 @@
         <img src="assets/signature.svg" class="signature-svg" alt="Signature">
     </div>
 
-    <div class="gui">
-        <a class="gui-element remove-underline faded" href="index.html">/home</a>
-        <a class="gui-element remove-underline">/blog</a>
-    </div>
     <script>
         document.querySelectorAll(".copyright-year").forEach((element) => {
-            element.textContent = new Date().getFullYear();
+             element.textContent = new Date().getFullYear();
+        });
+
+        window.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                document.body.classList.add('loaded');
+            }, 50);
         });
     </script>
 </body>

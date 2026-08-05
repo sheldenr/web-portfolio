@@ -1,6 +1,6 @@
 :root {
-  --bg: #171616;
-  --text: #919191;
+  --bg: #000000;
+  --text: #c5c5c5;
   --title-text: #f4f4f4;
   
   --accent-color: #8eb199;
@@ -33,6 +33,26 @@
     margin: 5vh auto 0;
     width: 28vw;
   }
+}
+
+.contents {
+  position: relative;
+}
+
+.top-nav-link {
+  position: absolute;
+  top: 0.5rem;
+  right: 0;
+  text-decoration: none !important;
+  font-size: 0.9rem;
+  color: var(--text) !important;
+  opacity: 0.6;
+  transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.top-nav-link:hover {
+  opacity: 1;
+  color: var(--accent-color) !important;
 }
 
 ::selection {
@@ -412,8 +432,7 @@ a {
   font-size: 0.75rem;
   color: var(--text);
   opacity: 0.8;
-  text-align: right;
-  white-space: nowrap;
+  text-align: left;
 }
 
 .project-info {
@@ -435,4 +454,125 @@ a {
 .project-header:hover .project-name {
   color: var(--accent-color);
 }
+
+/* Loader and Entrance Animations */
+#loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.6s cubic-bezier(0.85, 0, 0.15, 1), visibility 0.6s;
+}
+
+#loader-overlay.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+#loader-counter {
+  font-family: "Chivo Mono", monospace;
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+/* Page content animate-in */
+body.animate .contents, 
+body.animate .signature-container, 
+body.animate .gui, 
+body.animate .sticky-social {
+  opacity: 0;
+  transform: translateY(15px);
+  transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+body.animate.loaded .contents,
+body.animate.loaded .gui,
+body.animate.loaded .sticky-social {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+body.animate.loaded .signature-container {
+  opacity: 0.4;
+  transform: translateY(0);
+}
+
+/* Projects Grid Layout */
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.2rem;
+  margin-top: 1rem;
+}
+
+.project-card {
+  background-color: transparent;
+  transition: transform 0.3s ease;
+}
+
+.project-card-link {
+  text-decoration: none !important;
+  color: inherit !important;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.project-card-image {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border: 32px solid #ffffff;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  filter: contrast(95%) brightness(90%);
+  transition: filter 0.3s ease, border-color 0.3s ease;
+}
+
+.project-card-content {
+  padding: 0.5rem 0 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.project-card-description {
+  font-size: 0.78rem;
+  opacity: 0.7;
+  margin: 0.3rem 0;
+  line-height: 1.1rem;
+}
+
+.project-card:hover {
+  transform: translateY(-2px);
+}
+
+.project-card:hover .project-card-image {
+  filter: contrast(100%) brightness(100%);
+}
+
+.project-card:hover .project-name {
+  color: var(--accent-color);
+}
+
+.project-card:hover .project-link-icon {
+  transform: translate(2px, -2px);
+  color: var(--accent-color);
+}
+
+@media screen and (max-width: 680px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+  }
+}
+
 

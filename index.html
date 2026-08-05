@@ -10,8 +10,9 @@
     <link rel="stylesheet" type="text/css" href="style.css"/>
     <title>Shelden Rattray</title>
 </head>
-<body>
+<body class="animate">
     <div class="contents">
+        <a href="blogs.html" class="top-nav-link">blog</a>
     <section id="home">
         <img src="assets/portrait.png" class="profile-picture">
         <br>
@@ -31,51 +32,8 @@
             Me
         </p>
         <p>
-            I have personally fell in love with the idea of self growth, primarily in learning new things. In virtually any topic you choose, there is always depth that you would never know until you continue to explore.
-            I tend to think a bit too much and I enjoy writing it down in some form to review, so I will have some <a href="blogs.html">blog posts here</a>. Feel free to read if you ever get bored.
-            <br><br>
-	    My time recently has gone into studying system design, reading, (I gave myself the task of reading 10 pages daily) street photography and making music on guitar. I'm currently reading <a href="https://www.goodreads.com/book/show/54832594-four-thousand-weeks" target="_blank">Four Thousand Weeks</a> by Oliver Burkeman.
+            My time recently has gone into studying system design, reading, (I gave myself the task of reading 10 pages daily) street photography and making music on guitar. I'm currently reading <a href="https://www.goodreads.com/book/show/54832594-four-thousand-weeks" target="_blank">Four Thousand Weeks</a> by Oliver Burkeman. I tend to think a bit too much and I enjoy writing it down in some form to review, so I will have some <a href="blogs.html">blog posts here</a>. Feel free to read if you ever get bored.
         </p>
-    </section>
-
-    <section id="projects">
-        <p class="sub-section-title">
-            Featured Projects
-        </p>
-
-        
-        <div class="project-container">
-            <a class="project-header" href="https://www.polysia.app/" target="_blank">
-                <div class="project-info">
-                    <span class="project-name">Polysia <svg class="project-link-icon" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 1H9V7M9 1L3.5 6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                </div>
-                <div class="project-tech-list">
-                    React, PostgreSQL, Firebase
-                </div>
-            </a>
-        </div>
-
-        <div class="project-container">
-            <a class="project-header" href="https://github.com/asalontai/timeout" target="_blank">
-                <div class="project-info">
-                    <span class="project-name">Timeout Optimization <svg class="project-link-icon" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 1H9V7M9 1L3.5 6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                </div>
-                <div class="project-tech-list">
-                    Python, XGBoost
-                </div>
-            </a>
-        </div>
-        <div class="project-container">
-            <a class="project-header" href="https://github.com/sheldenr/osu-pp-calculator" target="_blank">
-                <div class="project-info">
-                    <span class="project-name">Performance Calculator <svg class="project-link-icon" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 1H9V7M9 1L3.5 6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                </div>
-                <div class="project-tech-list">
-                    JavaScript, Manifest V3
-                </div>
-            </a>
-        </div>
-
     </section>
 
     <section id="contact">
@@ -97,6 +55,46 @@
             </a>
         </div>
     </section>
+
+    <section id="projects">
+        <p class="sub-section-title">
+            Featured Projects
+        </p>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <a href="https://www.polysia.app/" target="_blank" class="project-card-link">
+                    <div class="project-card-content">
+                        <span class="project-name">Polysia <svg class="project-link-icon" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 1H9V7M9 1L3.5 6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                        <p class="project-card-description">Learn Chinese with stories you can understand. Polysia has stories you can read at your level at a reasonable price.</p>
+                        <div class="project-tech-list">React, PostgreSQL, Firebase</div>
+                    </div>
+                    <img src="assets/polysia.png" class="project-card-image" alt="Polysia Preview">
+                </a>
+            </div>
+
+            <div class="project-card">
+                <a href="https://www.vrtueproject.org/" target="_blank" class="project-card-link">
+                    <div class="project-card-content">
+                        <span class="project-name">VRTUE <svg class="project-link-icon" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 1H9V7M9 1L3.5 6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                        <p class="project-card-description">A premier showcase and curated directory highlighting exceptional Black talent in the tech industry.</p>
+                    </div>
+                    <img src="assets/vrtue-v2.png" class="project-card-image" alt="VRTUE Preview">
+                </a>
+            </div>
+
+            <div class="project-card">
+                <a href="https://github.com/sheldenr/osu-pp-calculator" target="_blank" class="project-card-link">
+                    <div class="project-card-content">
+                        <span class="project-name">Performance Calculator <svg class="project-link-icon" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 1H9V7M9 1L3.5 6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                        <p class="project-card-description">A Chrome extension with 10k+ active installs, providing real-time performance metrics and stats calculations for the popular rhythm game "osu!".</p>
+                        <div class="project-tech-list">JavaScript, Manifest V3</div>
+                    </div>
+                    <img src="assets/extension-preview-v2.png" class="project-card-image" alt="Performance Calculator Preview">
+                </a>
+            </div>
+        </div>
+    </section>
         
     </div>
 
@@ -104,13 +102,15 @@
         <img src="assets/signature.svg" class="signature-svg" alt="Signature">
     </div>
 
-    <div class="gui">
-        <p class="gui-element remove-underline">/home</p>
-        <a class="gui-element remove-underline faded" href="blogs.html">/blog</a>
-    </div>
     <script>
         document.querySelectorAll(".copyright-year").forEach((element) => {
-            element.textContent = new Date().getFullYear();
+             element.textContent = new Date().getFullYear();
+        });
+
+        window.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                document.body.classList.add('loaded');
+            }, 50);
         });
     </script>
 </body>
