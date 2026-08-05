@@ -533,7 +533,7 @@ body.animate.loaded .signature-container {
   border: 32px solid #ffffff;
   background-color: #ffffff;
   box-sizing: border-box;
-  filter: contrast(95%) brightness(90%);
+  filter: contrast(95%) brightness(90%) grayscale(100%);
   transition: filter 0.3s ease, border-color 0.3s ease;
 }
 
@@ -556,7 +556,7 @@ body.animate.loaded .signature-container {
 }
 
 .project-card:hover .project-card-image {
-  filter: contrast(100%) brightness(100%);
+  filter: contrast(100%) brightness(100%) grayscale(0%);
 }
 
 .project-card:hover .project-name {
