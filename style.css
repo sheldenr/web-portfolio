@@ -171,18 +171,14 @@ a {
 
 .profile-picture {
   display: block;
-  border-radius: 50%;
+  border-radius: 13%;
   overflow: hidden;
   margin: 0.5rem 0;
   filter: contrast(90%);
-  height: 85px;
-  width: 85px;
+  height: 65px;
+  width: 65px;
   object-fit: cover;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-.profile-picture:hover {
-  transform: scale(1.02);
 }
 
 .section-title {
